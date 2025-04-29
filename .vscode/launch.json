@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "EurekaApplication",
+            "request": "launch",
+            "mainClass": "com.server.eureka.EurekaApplication",
+            "projectName": "eureka"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-UserserviceApplication<userservice>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
@@ -18,6 +25,16 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.fitness.activityservice.ActivityserviceApplication",
             "projectName": "activityservice",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-AiserviceApplication<aiservice>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.fitness.aiservice.AiserviceApplication",
+            "projectName": "aiservice",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
