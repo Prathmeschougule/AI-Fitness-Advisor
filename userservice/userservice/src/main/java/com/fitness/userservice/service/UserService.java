@@ -55,9 +55,9 @@ public class UserService {
 
     public UserResponse getUserProfile(String userId) {
         User user= userRepository.findById(userId)
-                .orElseThrow(()-> new RuntimeException("User Id Not Found "));
+                .orElseThrow(()-> new RuntimeException("User Id Not Found"));
 
-        UserResponse response=new UserResponse();
+        UserResponse response = new UserResponse();
 
         response.setId(user.getId());
         response.setEmail(user.getEmail());

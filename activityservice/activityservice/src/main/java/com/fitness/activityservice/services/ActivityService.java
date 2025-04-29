@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 public class ActivityService {
 
     private final ActivityRepository activityRepository;
+
     private  final  UserValidationService userValidationService;
 
     public ActivityResponse trackActivity(ActivityRequest request) {
@@ -60,7 +61,7 @@ public class ActivityService {
        List<Activity> activities = activityRepository.findByUserId(userId);
 
        return activities.stream() //convert in to stream
-                         .map(this::mapToResponse)   //calling mapto respoce to every item
+                         .map(this::mapToResponse)   //calling map to response to every item
                          .collect(Collectors.toList());
     }
 

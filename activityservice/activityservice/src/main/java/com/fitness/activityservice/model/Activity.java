@@ -20,6 +20,7 @@ public class Activity {
     @Id
     private String id;
     private  String userId;
+
     //the ActivityType Is a not a type
     private ActivityType type;
     private  Integer duration;

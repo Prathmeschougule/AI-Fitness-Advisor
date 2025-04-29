@@ -16,7 +16,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
-@Table(name = "users")  //create table in database
+@Table(name = "users")          //create table in database
 @Data                           //reduce the boiler pleat and provide the  getter setter
 public class User {
    
