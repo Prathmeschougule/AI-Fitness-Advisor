@@ -13,5 +13,4 @@ public enum ActivityType {
     STRETCHING,
     OTHER
 
-
 }
