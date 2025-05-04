@@ -42,11 +42,17 @@ Welcome to the AI-Powered Fitness App! This application is designed with a micro
 ---
 
 ## 📂 Current Project Structure
+
 AI-FITNESS-ADVISOR/
+
 ├── activityservice/ # Tracks and manages user fitness activity
+
 ├── aiservice/ # Handles AI logic using Google Gemini API
+
 ├── eureka/ # Service Registry with Eureka
+
 ├── userservice/ # Manages user data and login/auth
+
 ├── .idea/ and .vscode/ # IDE-specific config files
 
 
