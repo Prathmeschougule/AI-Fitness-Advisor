@@ -1,4 +1,4 @@
-package com.fitness.activityservice.config;
+package com.fitness.aiservice.config;
 
 
 
