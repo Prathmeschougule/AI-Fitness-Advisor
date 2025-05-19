@@ -13,7 +13,7 @@ public class Activity {
 
     private String id;
     private  String userId;
-
+    private  String type;
     //the ActivityType Is a not a type
 
     private  Integer duration;
