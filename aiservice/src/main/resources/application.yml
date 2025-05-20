@@ -1,12 +1,10 @@
-
 server:
   port: 8083
-
 
 spring:
   application:
     name: ai-service
-  Data:
+  data:
     mongodb:
       url: mongodb://localhost:27017/fitnessrecommendation
       database: fitnessrecommendation
@@ -20,6 +18,10 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
 
 rabbitmq:
   exchange:
@@ -31,5 +33,5 @@ rabbitmq:
 
 gemini:
   api:
-    url: ${GEMINI_API}
-    key: ${GEMINI_KEY}
+    url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent
+    key: AIzaSyBq4Ty8EcFUh9a56tCEAh9BdJWG4N_TdxE

@@ -2,7 +2,6 @@ package com.fitness.aiservice.services;
 
 import com.fitness.aiservice.model.Recommendation;
 import com.fitness.aiservice.repository.RecommendationRepository;
-//import com.fitness.aiservice.exeption.RecommendationNotFoundException;/
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -24,5 +23,4 @@ public class RecommendationService {
                 .findFirst()
                 .orElseThrow(() -> new RuntimeException("No Recommendation Found on this Id: " + activityId));
     }
-
 }

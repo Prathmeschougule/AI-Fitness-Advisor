@@ -1,7 +1,8 @@
 package com.fitness.aiservice.services;
 
-
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fitness.aiservice.model.Activity;
+import com.fitness.aiservice.model.Recommendation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -11,21 +12,30 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class ActivityAiService {
 
-    private GeminiService geminiService;
+    private final GeminiService geminiService;
 
-    public  String generateRecommendation(Activity activity){
-
+    public String generateRecommendation(Activity activity) {
         String prompt = createPromptForActivity(activity);
         String aiResponse = geminiService.getAnswer(prompt);
-        log.info("RESPONSE FROM THE AI : {} " , aiResponse);
-        return  aiResponse;
+        log.info("RESPONSE FROM THE AI: {}", aiResponse);
+        processAiResponse(activity,aiResponse);
+        return aiResponse;
+    }
+
+    private void processAiResponse(Activity activity,String aiResponse){
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     private String createPromptForActivity(Activity activity) {
         return String.format("""
         Analyze this fitness activity and provide detailed recommendations in the following format
         {
-            "analysis" : {
+            "analysis": {
                 "overall": "Overall analysis here",
                 "pace": "Pace analysis here",
                 "heartRate": "Heart rate analysis here",
@@ -37,7 +47,7 @@ public class ActivityAiService {
                     "recommendation": "Detailed Recommendation"
                 }
             ],
-            "suggestions" : [
+            "suggestions": [
                 {
                     "workout": "Workout name",
                     "description": "Detailed workout description"
@@ -64,6 +74,4 @@ public class ActivityAiService {
                 activity.getAdditionalMetrics()
         );
     }
-
-
 }
