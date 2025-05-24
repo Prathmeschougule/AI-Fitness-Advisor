@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Document(collection = "recommendation")
-@Data
+@Data 
 @Builder
 public class Recommendation {
 
