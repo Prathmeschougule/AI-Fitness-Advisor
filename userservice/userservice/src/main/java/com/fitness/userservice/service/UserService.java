@@ -24,13 +24,27 @@ public class UserService {
     public UserResponse register(RegisterRequest request) {
 
         if (userRepository.existsByEmail(request.getEmail())) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Email already exists");
+            User existingUser =userRepository.findByEmail(request.getEmail());
+
+            UserResponse response=new UserResponse();
+
+            response.setId(existingUser.getId());
+            response.setKeycloakId(existingUser.getKeycloakId());
+            response.setEmail(existingUser.getEmail());
+            response.setPassword(existingUser.getPassword());
+            response.setFirstName(existingUser.getFirstName());
+            response.setLastName(existingUser.getLastName());
+            response.setCreateAt(existingUser.getCreateAt());
+            response.setUpdateAt(existingUser.getUpdateAt());
+
+            return response;
         }
 
         User user = new  User();
 
         user.setEmail(request.getEmail());
         user.setPassword(request.getPassword());
+        user.setKeycloakId(request.getKeycloakId());
         user.setFirstName( request.getFirstName());
         user.setLastName(request.getLastName());
 
@@ -40,6 +54,7 @@ public class UserService {
         UserResponse response=new UserResponse();
 
         response.setId(savedUser.getId());
+        response.setKeycloakId(savedUser.getKeycloakId());
         response.setEmail(savedUser.getEmail());
         response.setPassword(savedUser.getPassword());
         response.setFirstName(savedUser.getFirstName());
@@ -76,5 +91,10 @@ public class UserService {
         log.info(" Calling Validation API for  the UserId: {} ", userId);
         return userRepository.existsById(userId);
 
+    }
+
+    public Boolean existByKeycloakId(String userId) {
+        log.info(" Calling Validation API for  the UserId: {} ", userId);
+        return userRepository.existsById(userId);
     }
 }
