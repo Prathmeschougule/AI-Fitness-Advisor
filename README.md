@@ -1,4 +1,4 @@
-# 🧠 AI-Powered Fitness Application (Under Development)
+# 🤖 AI-Powered Fitness Application (Under Development)
 **Microservices-Based Full Stack Project using Spring Boot + React**
 
 Welcome to the AI-Powered Fitness App! This application is designed with a microservices architecture using Spring Boot and integrates AI through the Google Gemini API for personalized fitness insights.
@@ -53,12 +53,16 @@ AI-FITNESS-ADVISOR/
 
 ├── userservice/ # Manages user data and login/auth
 
+├── configserver/ # All services file config here 
+
+├── gateway/ # One Path 
+
 ├── .idea/ and .vscode/ # IDE-specific config files
 
 
 
 > Coming Soon:  
-> `apigateway/`, `configserver/`, and `frontend/ (React)`
+>`frontend/ (React)`
 
 ---
 

@@ -7,6 +7,10 @@ server:
 
 eureka :
   client:
-#    this is the eureka server we dont want to register it self  thats why its false
+#   this is the eureka server we dont want to register itself  thats why its false
     register-with-eureka: false
     fetch-registry: false
+
+
+#29-12-1973
+
