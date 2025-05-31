@@ -1,9 +1,9 @@
 
 export const authConfig = {
   clientId: 'oauth2-pkce-client',
-  authorizationEndpoint: 'http://localhost:8181/realms/fitness-oautha2/protocol/openid-connect/auth://myAuthProvider.com/auth',
-  tokenEndpoint: 'https://http://localhost:8181/realms/fitness-oautha2/protocol/openid-connect/token.com/token',
+  authorizationEndpoint: 'http://localhost:8181/realms/fitness-oautha2/protocol/openid-connect/auth',
+  tokenEndpoint: 'http://localhost:8181/realms/fitness-oautha2/protocol/openid-connect/token',
   redirectUri: 'http://localhost:5173/',
-  scope: 'openid profile Email offline_access' ,
+  scope: 'openid profile email offline_access',
   onRefreshTokenExpire: (event) => event.logIn(),
 }

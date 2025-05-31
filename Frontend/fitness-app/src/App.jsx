@@ -18,11 +18,19 @@ function App() {
   return (    
     <>
     <Router>
+      {!token ?(
       <Button variant="contained" color="secondary"
         onClick={()=>{
           logIn();
         }}
       > Login </Button>
+      ):(
+        <div>
+          <pre>
+            {JSON.stringify(tokenData,null,2)}
+          </pre>
+        </div>
+      )}
     </Router>
     </>
   )
