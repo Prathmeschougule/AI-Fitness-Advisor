@@ -17,7 +17,7 @@ Welcome to the AI-Powered Fitness App! This application is designed with a micro
 
 > Below is a preview of the AI Fitness Dashboard and Recommendations:
 
-![Fitness Dashboard](/Screenshot 2025-06-04 205517.png)
+![Fitness Dashboard](./Screenshot%202025-06-04%20205517.png)
 ![Activity Recommendations](Screenshot 2025-06-04 210258.png)
 
 > ℹ️ *Add your actual screenshots inside a `screenshots/` folder in your project root.*
