@@ -56,9 +56,26 @@ function App() {
             {JSON.stringify(tokenData,null,2)}
             {JSON.stringify(token,null,2)}
           </pre> */}
-            <Typography level="h2" sx={{ textAlign: "center", m: 3 }}>
-              Fitness AI Assistance
-            </Typography>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                margin: 24,
+              }}
+            >
+              <Typography level="h1">Fitness AI Assistance</Typography>
+              <Button
+                variant="contained"
+                color="secondary"
+                onClick={() => {
+                  logOut();
+                }}
+              >
+                Logout
+              </Button>
+            </div>
+
             <Box component="section" sx={{ p: 2, border: "1px dashed grey" }}>
               <Routes>
                 <Route path="/activities" element={<ActivitiesPage />} />

@@ -6,8 +6,21 @@ Welcome to the AI-Powered Fitness App! This application is designed with a micro
 ---
 
 ## 🚀 Project Status
-🚧 Backend Completed (Eureka, Services, RabbitMQ, AI Integration)  
-🧩 Work in Progress: API Gateway, Config Server, and Frontend (React)
+
+✅ **Frontend Completed (React)**  
+✅ **Backend Completed (Eureka, Services, RabbitMQ, AI Integration)**  
+🔧 **Work in Progress: API Gateway & Config Server**
+
+---
+
+## 📸 Screenshots
+
+> Below is a preview of the AI Fitness Dashboard and Recommendations:
+
+![Fitness Dashboard](Screenshot 2025-06-04 205517.png)
+![Activity Recommendations](Screenshot 2025-06-04 210258.png)
+
+> ℹ️ *Add your actual screenshots inside a `screenshots/` folder in your project root.*
 
 ---
 
@@ -17,6 +30,8 @@ Welcome to the AI-Powered Fitness App! This application is designed with a micro
 - 🤖 AI-Powered Workout Suggestions using Google Gemini API
 - ✅ Step-by-Step Modular Architecture
 - 📦 Asynchronous Communication with RabbitMQ
+- 🔐 Role-based authentication with Keycloak
+- 🎯 Personalized Recommendations by AI
 
 ---
 
@@ -25,54 +40,49 @@ Welcome to the AI-Powered Fitness App! This application is designed with a micro
 ### 🔹 Backend:
 - **Spring Boot** – Core framework for all services
 - **Eureka Server** – Service Discovery (Spring Cloud Netflix)
-- **RabbitMQ** – Asynchronous messaging between services (Spring AMQP)
+- **RabbitMQ** – Asynchronous messaging (Spring AMQP)
 - **Keycloak** – Authentication & Authorization
-- **PostgreSQL / MySQL** – Relational Database
+- **PostgreSQL / MySQL** – Relational Databases
 
 ### 🔹 AI Integration:
-- **Google Gemini API** – For personalized fitness tips and insights
+- **Google Gemini API** – AI fitness recommendations
 
 ### 🔹 Frontend:
-- **React.js** – (Coming Soon)
+- **React.js** – Dynamic Single Page Application
 
-### 🔹 Upcoming Components:
+### 🔹 Cloud Infrastructure:
 - **Spring Cloud Gateway** – Central API Gateway
-- **Spring Cloud Config Server** – Centralized Configuration
+- **Spring Cloud Config Server** – Centralized Config Management
 
 ---
 
-## 📂 Current Project Structure
+## 📂 Project Structure
 
 AI-FITNESS-ADVISOR/
-
 ├── activityservice/ # Tracks and manages user fitness activity
+├── aiservice/ # AI logic using Gemini API
+├── eureka/ # Service Registry
+├── userservice/ # User login, profile
+├── configserver/ # Externalized config for services
+├── gateway/ # API Gateway
+├── frontend/ # React Frontend (Completed)
+├── screenshots/ # Project Screenshots
 
-├── aiservice/ # Handles AI logic using Google Gemini API
-
-├── eureka/ # Service Registry with Eureka
-
-├── userservice/ # Manages user data and login/auth
-
-├── configserver/ # All services file config here 
-
-├── gateway/ # One Path 
-
-├── .idea/ and .vscode/ # IDE-specific config files
-
-
-
-> Coming Soon:  
->`frontend/ (React)`
 
 ---
 
-## 🔧 How to Run (Backend)
+## 🔧 How to Run (Backend + Frontend)
 
-1. Start the **Eureka Server**
-2. Start **RabbitMQ Server** locally or via Docker
-3. Run each service: `activityservice`, `aiservice`, `userservice`
-4. Test APIs using Postman or Swagger UI
+### 1. Backend:
+- Start **Eureka Server**
+- Run **RabbitMQ** locally or via Docker
+- Start `activityservice`, `aiservice`, `userservice`
+- Verify services registered with Eureka
+- Test APIs using Swagger UI or Postman
 
-> Frontend setup and API Gateway will be updated once completed.
-
-
+### 2. Frontend:
+- Navigate to `frontend/`  
+- Run:
+  ```bash
+  npm install
+  npm start

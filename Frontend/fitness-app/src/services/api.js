@@ -22,7 +22,8 @@ api.interceptors.request.use((config)=>{
 // the  backend Endpoint 
 export const getActivities= ()=> api.get('/activities');
 export const addActivity= (activity)=> api.post('/activities',activity);
-export const addActivityDetail= ()=> api.post('/recommendation/activity/${id}');
+export const getActivityDetail = (id) => api.get(`/recommendation/activity/${id}`);
+
 
 
 
