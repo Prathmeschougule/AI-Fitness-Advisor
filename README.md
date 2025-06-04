@@ -19,7 +19,9 @@ Welcome to the AI-Powered Fitness App! This application is designed with a micro
 
 ![Fitness Login](./Screenshot%202025-06-04%20205517.png)
 ![AI Recommendation](./Screenshot%202025-06-04%20210258.png)
-![Recommendation](./Screenshot%202025-06-04%20210258.png)
+![Recommendation](./Screenshot%2025-06-04%210449.png)
+
+
 
 
 ---
